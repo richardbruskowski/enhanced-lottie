@@ -14,4 +14,7 @@ dist
 node_modules
 .npmrc
 *.framerxproj
-enhanced-lottie.framerfx/.yarnrc
+
+# Added manually 
+.yarnrc
+.github/workflows
