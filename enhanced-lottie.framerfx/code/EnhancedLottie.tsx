@@ -143,7 +143,7 @@ addPropertyControls(EnhancedLottie, {
         step: 0.1,
         unit: "%",
         displayStepper: false,
-        title: "Frame",
+        title: "Position",
         hidden(props) {
             return props.playState !== "stop"
         },
