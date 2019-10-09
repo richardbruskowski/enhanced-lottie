@@ -1,5 +1,7 @@
 ---
-on: push
+on:
+  push:
+    branches: master
 name: Build and publish
 jobs:
   publish:
@@ -7,16 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Branch filter
-        uses: actions/bin/filter@master
-        with:
-          args: branch master
       - name: Build
         uses: framer/bridge@master
         env:
           FRAMER_TOKEN: ${{ secrets.FRAMER_TOKEN }}
         with:
           args: build enhanced-lottie.framerfx
+
       - name: Publish
         uses: framer/bridge@master
         env:
